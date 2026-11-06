@@ -68,7 +68,7 @@ Matchmaking first looks for an opponent with your medal, then neighboring medals
 Couloir is a native app written entirely in **Swift 6** and **SwiftUI**, with no game engine or third-party library. A single project builds the app for iPhone, iPad and Mac, with an interface that adapts to every screen, from the smallest iPhone to a large Mac display.
 
 <div class="tech-grid" markdown="0">
-  <div class="tech"><strong>SwiftUI &amp; Observation</strong><span>Interface, animations, light and dark themes, Dynamic Type and VoiceOver.</span></div>
+  <div class="tech"><strong>SwiftUI &amp; Observation</strong><span>Interface, animations, light and dark themes, Reduce Motion.</span></div>
   <div class="tech"><strong>Custom game engine</strong><span>64-bit bitboards and pathfinding (BFS) in under a microsecond.</span></div>
   <div class="tech"><strong>Artificial intelligence</strong><span>Negamax alpha-beta search with iterative deepening, computed off the main thread.</span></div>
   <div class="tech"><strong>MultipeerConnectivity</strong><span>Nearby games over Wi‑Fi or Bluetooth, with no server.</span></div>

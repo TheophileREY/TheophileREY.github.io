@@ -68,7 +68,7 @@ Le matchmaking cherche d'abord un adversaire de votre médaille, puis des médai
 Couloir est une app native, écrite entièrement en **Swift 6** et **SwiftUI**, sans moteur de jeu ni bibliothèque tierce. Un seul projet produit l'app pour l'iPhone, l'iPad et le Mac, avec une interface qui s'adapte à chaque écran, du plus petit iPhone au grand écran du Mac.
 
 <div class="tech-grid" markdown="0">
-  <div class="tech"><strong>SwiftUI &amp; Observation</strong><span>Interface, animations, thèmes clairs et sombres, Dynamic Type et VoiceOver.</span></div>
+  <div class="tech"><strong>SwiftUI &amp; Observation</strong><span>Interface, animations, thèmes clairs et sombres, réduction des animations.</span></div>
   <div class="tech"><strong>Moteur de jeu maison</strong><span>Plateau en « bitboards » 64 bits et recherche de chemin (BFS) en moins d'une microseconde.</span></div>
   <div class="tech"><strong>Intelligence artificielle</strong><span>Recherche negamax alpha-bêta à approfondissement itératif, calculée hors du fil principal.</span></div>
   <div class="tech"><strong>MultipeerConnectivity</strong><span>Parties à proximité en Wi‑Fi ou Bluetooth, sans serveur.</span></div>
