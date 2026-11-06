@@ -1,0 +1,79 @@
+# Paragraphes de la politique de confidentialité, assemblés selon les fonctions déclarées par chaque app
+# (liste `privacy` de _data/apps/<app>.yml). « %APP% » est remplacé par le nom de l'app.
+fr:
+  intro: "%APP% respecte votre vie privée : l'app ne collecte aucune donnée personnelle, n'affiche aucune publicité et n'intègre aucun outil de mesure d'audience ni de pistage. Je n'ai accès à aucune information vous concernant."
+  summary_title: "En bref"
+  summary:
+    - "Aucune donnée collectée, aucun compte à créer."
+    - "Aucune publicité, aucun pistage, aucune analyse d'usage."
+    - "Ce que l'app enregistre reste sur votre appareil."
+  sections:
+    on_device_storage:
+      title: "Données enregistrées sur votre appareil"
+      text: "Vos réglages, vos statistiques de jeu et la partie en cours sont enregistrés uniquement sur votre appareil. Ils ne sont jamais transmis. Supprimer l'app les efface."
+    online_play:
+      title: "Jeu en ligne"
+      text: "Pour jouer en ligne, %APP% utilise Game Center (Apple) : le code de partie à 8 chiffres sert uniquement à réunir les deux joueurs, puis les coups et le nom de joueur choisi transitent par les serveurs d'Apple jusqu'à l'autre joueur. Je n'y ai pas accès et rien n'est conservé après la partie. En partie classée, le matchmaking de Game Center réunit des joueurs de médaille proche ; votre cote (un nombre de points) est annoncée à votre adversaire. Ces échanges relèvent de la politique de confidentialité d'Apple."
+    local_network:
+      title: "Réseau local"
+      text: "Pour jouer à deux appareils, %APP% utilise le réseau local (Wi‑Fi ou Wi‑Fi pair-à-pair) afin de trouver l'autre appareil et d'échanger les coups de la partie, directement d'appareil à appareil, sans serveur. Seul le nom de joueur que vous choisissez est visible des appareils proches. L'autorisation n'est demandée qu'à l'utilisation de ce mode."
+    bluetooth:
+      title: "Bluetooth"
+      text: "Le Bluetooth sert uniquement à relier deux appareils proches pour une partie, même sans réseau Wi‑Fi. Aucune donnée n'est collectée par ce biais."
+    shareplay:
+      title: "SharePlay"
+      text: "Pendant un appel FaceTime, SharePlay transmet les coups de la partie entre les participants par l'intermédiaire d'Apple. Je n'y ai pas accès. Le traitement de ces échanges relève de la politique de confidentialité d'Apple."
+    game_center:
+      title: "Game Center"
+      text: "Si vous êtes connecté à Game Center, vos scores, votre cote classée et vos succès sont envoyés à Apple pour les classements. Ce service est fourni et géré par Apple, selon sa propre politique de confidentialité ; vous pouvez le désactiver dans les réglages de l'appareil."
+    in_app_purchase:
+      title: "Achats intégrés"
+      text: "Les achats sont traités par l'App Store. Je ne reçois aucune information de paiement ; l'app vérifie seulement auprès de l'App Store si l'achat a été effectué, pour débloquer les fonctions correspondantes."
+    widgets:
+      title: "Widgets et activité en direct"
+      text: "Les widgets et l'activité en direct affichent des informations calculées sur votre appareil (partie en cours, statistiques). Elles ne quittent pas votre appareil."
+  children_title: "Enfants"
+  children_text: "%APP% convient à tous les âges et ne collecte aucune donnée, y compris auprès des enfants."
+  changes_title: "Modifications"
+  changes_text: "Si cette politique évolue, la nouvelle version sera publiée sur cette page, avec sa date de mise à jour."
+  contact_title: "Contact"
+  contact_text: "Pour toute question sur cette politique :"
+
+en:
+  intro: "%APP% respects your privacy: the app collects no personal data, shows no ads and contains no analytics or tracking tools. I have no access to any information about you."
+  summary_title: "In short"
+  summary:
+    - "No data collected, no account to create."
+    - "No ads, no tracking, no usage analytics."
+    - "What the app saves stays on your device."
+  sections:
+    on_device_storage:
+      title: "Data saved on your device"
+      text: "Your settings, game statistics and current game are saved only on your device. They are never transmitted. Deleting the app erases them."
+    online_play:
+      title: "Online play"
+      text: "To play online, %APP% uses Game Center (Apple): the 8-digit game code is only used to bring the two players together, then the moves and the player name you choose travel through Apple's servers to the other player. I have no access to them and nothing is kept after the game. In ranked games, Game Center matchmaking brings together players with similar medals; your rating (a number of points) is shared with your opponent. These exchanges are handled under Apple's privacy policy."
+    local_network:
+      title: "Local network"
+      text: "To play on two devices, %APP% uses the local network (Wi‑Fi or peer-to-peer Wi‑Fi) to find the other device and exchange the moves of the game, directly from device to device, with no server. Only the player name you choose is visible to nearby devices. Permission is requested only when you use this mode."
+    bluetooth:
+      title: "Bluetooth"
+      text: "Bluetooth is only used to connect two nearby devices for a game, even without a Wi‑Fi network. No data is collected this way."
+    shareplay:
+      title: "SharePlay"
+      text: "During a FaceTime call, SharePlay sends the moves of the game between participants through Apple. I have no access to them. These exchanges are handled under Apple's privacy policy."
+    game_center:
+      title: "Game Center"
+      text: "If you are signed in to Game Center, your scores, ranked rating and achievements are sent to Apple for leaderboards. This service is provided and operated by Apple under its own privacy policy; you can turn it off in your device's settings."
+    in_app_purchase:
+      title: "In-app purchases"
+      text: "Purchases are processed by the App Store. I receive no payment information; the app only checks with the App Store whether a purchase was made, to unlock the corresponding features."
+    widgets:
+      title: "Widgets and Live Activity"
+      text: "Widgets and the Live Activity show information computed on your device (current game, statistics). It never leaves your device."
+  children_title: "Children"
+  children_text: "%APP% is suitable for all ages and collects no data, including from children."
+  changes_title: "Changes"
+  changes_text: "If this policy changes, the new version will be published on this page with its update date."
+  contact_title: "Contact"
+  contact_text: "For any question about this policy:"

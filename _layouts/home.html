@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{%- assign t = site.data.i18n[page.lang] | default: site.data.i18n[site.default_lang] -%}
+<section class="home-hero">
+  <p class="eyebrow">{{ t.site_tagline }}</p>
+  <h1>{{ t.home_title }}</h1>
+  <p class="lead">{{ t.home_intro }}</p>
+</section>
+<section class="section">
+  <h2 class="section-title">{{ t.apps_heading }}</h2>
+  <div class="app-grid">
+    {%- comment -%} Les fiches sont triées par leur champ `order`. {%- endcomment -%}
+    {%- assign ordered = "" | split: "" -%}
+    {%- for entry in site.data.apps -%}{%- assign ordered = ordered | push: entry[1] -%}{%- endfor -%}
+    {%- assign ordered = ordered | sort: "order" -%}
+    {%- for app in ordered %}
+    {% include app-card.html app=app %}
+    {%- endfor %}
+  </div>
+</section>
+{{ content }}

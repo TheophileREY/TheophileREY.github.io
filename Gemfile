@@ -1,0 +1,4 @@
+# Aperçu local (facultatif) : bundle install, puis bundle exec jekyll serve
+source "https://rubygems.org"
+gem "github-pages", group: :jekyll_plugins
+gem "webrick"

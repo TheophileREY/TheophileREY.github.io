@@ -1,0 +1,23 @@
+{%- comment -%} Bandeau d'en-tête d'une app (pages app, assistance, confidentialité). Paramètres : include.app, include.title {%- endcomment -%}
+{%- assign t = site.data.i18n[page.lang] | default: site.data.i18n[site.default_lang] -%}
+{%- assign app = include.app -%}
+<section class="hero{% if include.compact %} hero-compact{% endif %}" style="--top: {{ app.colors.top }}; --bottom: {{ app.colors.bottom }}; --glow: {{ app.colors.glow }}; --accent: {{ app.colors.accent }};">
+  <div class="hero-inner">
+    <img class="hero-icon" src="{{ app.icon | relative_url }}" alt="" width="128" height="128">
+    <div class="hero-text">
+      {%- if include.title %}
+      <p class="eyebrow">{{ app.name }}</p>
+      <h1>{{ include.title }}</h1>
+      {%- else %}
+      <h1>{{ app.name }}</h1>
+      <p class="tagline">{{ app.tagline[page.lang] }}</p>
+      <p class="summary">{{ app.summary[page.lang] }}</p>
+      <div class="hero-actions">
+        {% include store-button.html app=app %}
+        <p class="chips">{% for platform in app.platforms %}<span class="chip">{{ platform }}</span>{% endfor %}</p>
+      </div>
+      <p class="price">{{ app.price[page.lang] }}</p>
+      {%- endif %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+{%- assign t = site.data.i18n[page.lang] | default: site.data.i18n[site.default_lang] -%}
+{%- if page.lang == "en" -%}{%- assign home = "/en/" -%}{%- else -%}{%- assign home = "/" -%}{%- endif -%}
+<footer class="site-footer">
+  <p>{{ t.footer_made }} <a href="{{ home | relative_url }}">{{ site.author }}</a> · © {{ site.copyright_year }}</p>
+  {%- if page.app -%}
+    {%- assign app = site.data.apps[page.app] -%}
+    {%- if page.lang == "en" -%}{%- assign app_root = "/en/" | append: app.slug | append: "/" -%}{%- else -%}{%- assign app_root = "/" | append: app.slug | append: "/" -%}{%- endif %}
+  <p class="footer-links">
+    <a href="{{ app_root | append: 'support/' | relative_url }}">{{ t.support }}</a>
+    <a href="{{ app_root | append: 'privacy/' | relative_url }}">{{ t.privacy_policy }}</a>
+    <a href="{{ home | relative_url }}">{{ t.all_apps }}</a>
+  </p>
+  {%- endif %}
+  <p class="footer-note">{{ t.footer_no_tracking }}</p>
+</footer>

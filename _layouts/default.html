@@ -1,0 +1,14 @@
+<!doctype html>
+{%- assign t = site.data.i18n[page.lang] | default: site.data.i18n[site.default_lang] %}
+<html lang="{{ t.html_lang }}">
+<head>
+{% include head.html %}
+</head>
+<body class="layout-{{ page.layout }}">
+{% include header.html %}
+<main id="contenu">
+{{ content }}
+</main>
+{% include footer.html %}
+</body>
+</html>

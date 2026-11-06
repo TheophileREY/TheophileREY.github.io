@@ -1,0 +1,13 @@
+{%- assign t = site.data.i18n[page.lang] | default: site.data.i18n[site.default_lang] -%}
+{%- assign app = include.app -%}
+{%- if page.lang == "en" -%}{%- assign app_root = "/en/" | append: app.slug | append: "/" -%}{%- else -%}{%- assign app_root = "/" | append: app.slug | append: "/" -%}{%- endif -%}
+<a class="app-card" href="{{ app_root | relative_url }}" style="--top: {{ app.colors.top }}; --bottom: {{ app.colors.bottom }}; --glow: {{ app.colors.glow }}; --accent: {{ app.colors.accent }};">
+  <img class="app-card-icon" src="{{ app.icon | relative_url }}" alt="" width="96" height="96">
+  <div class="app-card-text">
+    <h3>{{ app.name }}</h3>
+    <p class="app-card-tagline">{{ app.tagline[page.lang] }}</p>
+    <p class="app-card-summary">{{ app.summary[page.lang] }}</p>
+    <p class="chips">{% for platform in app.platforms %}<span class="chip">{{ platform }}</span>{% endfor %}</p>
+  </div>
+  <span class="app-card-cta">{{ t.discover }} →</span>
+</a>

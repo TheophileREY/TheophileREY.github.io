@@ -1,0 +1,30 @@
+---
+layout: default
+---
+{%- assign t = site.data.i18n[page.lang] | default: site.data.i18n[site.default_lang] -%}
+{%- assign app = site.data.apps[page.app] -%}
+{% include app-hero.html app=app title=t.support_title compact=true %}
+<section class="section">
+  <div class="contact-card">
+    <h2>{{ t.contact_heading }}</h2>
+    <p>{{ t.contact_text }}</p>
+    <p><a class="button" href="mailto:{{ site.contact_email }}?subject={{ app.name | url_encode }}%20%E2%80%94%20{{ t.support | url_encode }}">{{ t.contact_button }}</a></p>
+    <p class="muted">{{ site.contact_email }} · {{ t.contact_include }}</p>
+  </div>
+</section>
+<section class="section">
+  <h2 class="section-title">{{ t.faq }}</h2>
+  <div class="faq">
+    {%- for item in app.faq[page.lang] %}
+    <details>
+      <summary>{{ item.q }}</summary>
+      <p>{{ item.a }}</p>
+    </details>
+    {%- endfor %}
+  </div>
+</section>
+{%- if content != "" %}
+<article class="section prose">
+{{ content }}
+</article>
+{%- endif %}

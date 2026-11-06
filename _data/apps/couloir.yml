@@ -1,0 +1,117 @@
+# Fiche de l'app Couloir. Pour une nouvelle app : copiez ce fichier sous _data/apps/<slug>.yml et adaptez-le.
+slug: couloir
+name: Couloir
+order: 1                      # rang sur la page d'accueil
+
+# Identifiant Apple de l'app (App Store Connect › Informations sur l'app › Informations générales › Identifiant Apple),
+# par exemple "6740000000". Tant qu'il est vide, le site affiche « Bientôt sur l'App Store » et n'active pas
+# la bannière Smart App Banner de Safari.
+app_store_id: ""
+bundle_id: fr.theophilerey.couloir
+# Lien profond transmis à l'app par la Smart App Banner (facultatif).
+app_argument: "couloir://resume"
+
+icon: /assets/apps/couloir/icon.png
+platforms: [iPhone, iPad, Mac]
+privacy_updated: 2026-11-06
+
+# Couleurs de la page de l'app (dégradé du bandeau et accent).
+colors:
+  top: "#1B2244"
+  bottom: "#090C18"
+  glow: "#3C4FB8"
+  accent: "#F5C451"
+
+tagline:
+  fr: "Tracez votre chemin. Barrez le sien."
+  en: "Clear your path. Block theirs."
+summary:
+  fr: "Un duel de stratégie au tour par tour, élégant et exigeant : amenez votre pion de l'autre côté du plateau avant votre adversaire, en lui barrant la route à coups de murs."
+  en: "An elegant, demanding turn-based strategy duel: get your pawn to the other side of the board before your opponent does, while blocking their way with walls."
+price:
+  fr: "Gratuit — jeu à deux (en ligne, classé, SharePlay, face à face) par achat intégré unique"
+  en: "Free — two-player mode (online, ranked, SharePlay, head to head) as a one-time in-app purchase"
+
+# Captures affichées sur la page (dossier assets/apps/couloir/<langue>/).
+screenshots:
+  - file: iphone-1.jpg
+    device: iphone
+    alt: { fr: "Partie contre l'ordinateur", en: "Game against the computer" }
+  - file: iphone-2.jpg
+    device: iphone
+    alt: { fr: "Menu principal", en: "Main menu" }
+  - file: iphone-4.jpg
+    device: iphone
+    alt: { fr: "Face à face sur un même iPhone", en: "Head to head on one iPhone" }
+  - file: iphone-5.jpg
+    device: iphone
+    alt: { fr: "Six thèmes au choix", en: "Six themes to choose from" }
+  - file: iphone-6.jpg
+    device: iphone
+    alt: { fr: "Partie en ligne avec un code à 8 chiffres", en: "Online game with an 8-digit code" }
+  - file: iphone-7.jpg
+    device: iphone
+    alt: { fr: "Partie classée : recherche d'un adversaire de votre médaille", en: "Ranked game: finding an opponent with your medal" }
+  - file: mac-1.jpg
+    device: mac
+    alt: { fr: "Couloir sur Mac", en: "Couloir on Mac" }
+
+# Fonctions qui alimentent la politique de confidentialité (voir _data/privacy.yml).
+privacy:
+  - on_device_storage
+  - online_play
+  - local_network
+  - bluetooth
+  - shareplay
+  - game_center
+  - in_app_purchase
+  - widgets
+
+# Questions fréquentes de la page d'assistance.
+faq:
+  fr:
+    - q: "Le jeu est-il gratuit ?"
+      a: "Oui pour l'essentiel : le jeu contre l'ordinateur et ses quatre niveaux, rejoindre une partie à proximité, les thèmes, les widgets et Game Center sont gratuits, sans publicité. Un achat unique (2,99 €) débloque le reste du jeu à deux : face à face sur un même appareil, parties en ligne, parties classées, SharePlay et création de parties à proximité. Il est partagé avec votre famille grâce au Partage familial."
+    - q: "Comment restaurer mon achat sur un nouvel appareil ?"
+      a: "Ouvrez Réglages › Achats › « Restaurer les achats » (ou touchez un mode à deux, puis « Restaurer les achats »). Utilisez le même identifiant Apple que lors de l'achat."
+    - q: "Mon ami doit-il aussi acheter le jeu à deux ?"
+      a: "Pour une partie à proximité (Wi‑Fi ou Bluetooth), non : celui qui crée la partie doit avoir débloqué le jeu à deux, l'autre la rejoint gratuitement. En ligne, en partie classée et avec SharePlay, chacun des deux joueurs doit l'avoir débloqué (ou en profiter via le Partage familial)."
+    - q: "Comment jouer en ligne avec un ami ?"
+      a: "Les deux joueurs doivent être connectés à Game Center. L'un ouvre « À deux appareils » › « Créer un code » : un code à 8 chiffres s'affiche, valable 2 minutes, avec des boutons pour le copier ou le partager. L'autre touche « Saisir un code », le tape ou le colle, puis « Rejoindre ». Cela fonctionne en Wi‑Fi comme en 4G/5G, même sur des réseaux différents."
+    - q: "Comment fonctionnent les médailles ?"
+      a: "Chaque joueur a une cote, calculée comme le classement Elo des échecs : elle part de 1 000 points, et une victoire rapporte d'autant plus de points que l'adversaire était fort. La cote donne la médaille : Bronze, Argent (1 100), Or (1 300), Platine (1 500), Diamant (1 700), Maître (1 900) et Grand maître (2 100). Le matchmaking cherche d'abord un adversaire de votre médaille, puis des médailles voisines, puis tous les joueurs."
+    - q: "Que se passe-t-il si je quitte une partie classée ?"
+      a: "Quitter une partie classée en cours, ou fermer l'app pendant la partie, compte comme une défaite. Si c'est votre adversaire qui part, la victoire vous revient. Votre cote est enregistrée dans Game Center : vous la retrouvez sur tous vos appareils (Réglages › Classement › Classement mondial)."
+    - q: "Mon code ne fonctionne pas."
+      a: "Un code n'est valable que 2 minutes et ne sert qu'une fois. Demandez un nouveau code, vérifiez que les deux appareils ont accès à internet et sont connectés à Game Center (Réglages › Game Center), et que le jeu en ligne n'est pas bloqué par Temps d'écran."
+    - q: "La partie à proximité ne trouve pas l'autre joueur."
+      a: "Gardez les deux appareils à quelques mètres, Wi‑Fi ou Bluetooth activé. Vérifiez que Couloir a accès au réseau local : Réglages de l'appareil › Confidentialité et sécurité › Réseau local. Sur Mac, autorisez Couloir dans le pare-feu si besoin."
+    - q: "Comment jouer à distance avec SharePlay ?"
+      a: "Lancez un appel FaceTime avec votre ami, ouvrez Couloir, puis « À deux appareils » › « Lancer SharePlay ». Votre ami n'a qu'à rejoindre l'activité proposée dans FaceTime. Sans appel en cours, « Inviter avec SharePlay » ouvre la feuille de partage."
+    - q: "Comment afficher le widget ou l'activité en direct ?"
+      a: "Touchez longuement l'écran d'accueil › Modifier › Ajouter un widget › Couloir. Pendant une partie, l'activité en direct apparaît sur l'écran verrouillé et dans la Dynamic Island ; vous pouvez la désactiver dans Réglages › Retours."
+    - q: "Mes classements Game Center n'apparaissent pas."
+      a: "Connectez-vous à Game Center dans les réglages de l'appareil. Les victoires contre l'ordinateur sont envoyées aux classements dès la fin de chaque partie gagnée."
+  en:
+    - q: "Is the game free?"
+      a: "Mostly, yes: playing the computer with its four levels, joining a nearby game, themes, widgets and Game Center are free, with no ads. A one-time purchase unlocks the rest of two-player mode: head to head on one device, online games, ranked games, SharePlay and hosting nearby games. It is shared with your family through Family Sharing."
+    - q: "How do I restore my purchase on a new device?"
+      a: "Open Settings › Purchases › “Restore Purchases” (or tap a two-player mode, then “Restore Purchases”). Use the same Apple Account you bought it with."
+    - q: "Does my friend also need to buy two-player mode?"
+      a: "For a nearby game (Wi‑Fi or Bluetooth), no: whoever hosts the game needs two-player mode, the other player joins for free. Online, in ranked games and with SharePlay, both players need to have unlocked it (or get it through Family Sharing)."
+    - q: "How do I play online with a friend?"
+      a: "Both players must be signed in to Game Center. One opens “Two Devices” › “Create a Code”: an 8-digit code appears, valid for 2 minutes, with buttons to copy or share it. The other taps “Enter a Code”, types or pastes it, then “Join”. It works over Wi‑Fi or 4G/5G, even on different networks."
+    - q: "How do medals work?"
+      a: "Every player has a rating, computed like the chess Elo rating: it starts at 1,000 points, and a win earns more points the stronger your opponent was. Your rating gives your medal: Bronze, Silver (1,100), Gold (1,300), Platinum (1,500), Diamond (1,700), Master (1,900) and Grandmaster (2,100). Matchmaking first looks for an opponent with your medal, then neighboring medals, then all players."
+    - q: "What happens if I leave a ranked game?"
+      a: "Leaving a ranked game in progress, or closing the app during the game, counts as a loss. If your opponent leaves, the win is yours. Your rating is saved in Game Center: you'll find it on all your devices (Settings › Ranking › World Leaderboard)."
+    - q: "My code doesn't work."
+      a: "A code is only valid for 2 minutes and can be used once. Ask for a new code, and make sure both devices are online, signed in to Game Center (Settings › Game Center), and that online play isn't blocked by Screen Time."
+    - q: "The nearby game can't find the other player."
+      a: "Keep both devices within a few meters, with Wi‑Fi or Bluetooth turned on. Make sure Couloir can access the local network: device Settings › Privacy & Security › Local Network. On Mac, allow Couloir in the firewall if needed."
+    - q: "How do I play remotely with SharePlay?"
+      a: "Start a FaceTime call with your friend, open Couloir, then “Two Devices” › “Start SharePlay”. Your friend just joins the activity offered in FaceTime. Without an ongoing call, “Invite with SharePlay” opens the share sheet."
+    - q: "How do I show the widget or the Live Activity?"
+      a: "Touch and hold the Home Screen › Edit › Add Widget › Couloir. During a game, the Live Activity appears on the Lock Screen and in the Dynamic Island; you can turn it off in Settings › Sound & Haptics."
+    - q: "My Game Center leaderboards don't show up."
+      a: "Sign in to Game Center in your device's Settings. Wins against the computer are sent to the leaderboards at the end of every game you win."

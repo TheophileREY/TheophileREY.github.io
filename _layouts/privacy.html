@@ -1,0 +1,37 @@
+---
+layout: default
+---
+{%- assign t = site.data.i18n[page.lang] | default: site.data.i18n[site.default_lang] -%}
+{%- assign app = site.data.apps[page.app] -%}
+{%- assign p = site.data.privacy[page.lang] -%}
+{% include app-hero.html app=app title=t.privacy_policy compact=true %}
+<article class="section prose">
+  {%- if page.lang == "fr" %}
+  <p class="muted">{{ t.updated }} : {{ app.privacy_updated | date: "%d/%m/%Y" }}</p>
+  {%- else %}
+  <p class="muted">{{ t.updated }}: {{ app.privacy_updated | date: "%B %-d, %Y" }}</p>
+  {%- endif %}
+  <p class="lead">{{ p.intro | replace: "%APP%", app.name }}</p>
+  <div class="summary-card">
+    <h2>{{ p.summary_title }}</h2>
+    <ul>
+      {%- for line in p.summary %}
+      <li>{{ line }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- for key in app.privacy %}
+  {%- assign section = p.sections[key] %}
+  {%- if section %}
+  <h2>{{ section.title }}</h2>
+  <p>{{ section.text | replace: "%APP%", app.name }}</p>
+  {%- endif %}
+  {%- endfor %}
+  {{ content }}
+  <h2>{{ p.children_title }}</h2>
+  <p>{{ p.children_text | replace: "%APP%", app.name }}</p>
+  <h2>{{ p.changes_title }}</h2>
+  <p>{{ p.changes_text }}</p>
+  <h2>{{ p.contact_title }}</h2>
+  <p>{{ p.contact_text }} <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+</article>

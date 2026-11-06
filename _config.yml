@@ -1,0 +1,28 @@
+# Site des apps de Théophile Rey, publié par GitHub Pages (Jekyll, sans dépendance à installer).
+#
+# Avant la première publication, remplacez :
+#   - url            → https://TheophileREY.github.io (le dépôt doit s'appeler TheophileREY.github.io)
+#   - contact_email  → l'adresse qui répond aux utilisateurs (affichée sur les pages d'assistance)
+title: "Théophile Rey"
+description: "Jeux et apps pour iPhone, iPad et Mac, conçus avec soin en Swift."
+author: "Théophile Rey"
+url: "https://TheophileREY.github.io"
+baseurl: ""
+contact_email: "babbler.kart-8p@icloud.com"
+copyright_year: 2026
+
+# Langues du site : chaque page porte `lang` et `alt` (adresse de la même page dans l'autre langue).
+default_lang: fr
+
+markdown: kramdown
+kramdown:
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+permalink: pretty
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache

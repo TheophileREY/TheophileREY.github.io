@@ -1,0 +1,17 @@
+{%- assign t = site.data.i18n[page.lang] | default: site.data.i18n[site.default_lang] -%}
+{%- if page.lang == "en" -%}{%- assign home = "/en/" -%}{%- else -%}{%- assign home = "/" -%}{%- endif -%}
+<header class="site-header">
+  <a class="brand" href="{{ home | relative_url }}">{{ site.title }}</a>
+  <nav class="site-nav" aria-label="Navigation">
+    {%- if page.app -%}
+      {%- assign app = site.data.apps[page.app] -%}
+      {%- if page.lang == "en" -%}{%- assign app_root = "/en/" | append: app.slug | append: "/" -%}{%- else -%}{%- assign app_root = "/" | append: app.slug | append: "/" -%}{%- endif %}
+    <a href="{{ app_root | relative_url }}"{% if page.layout == "app" %} aria-current="page"{% endif %}>{{ app.name }}</a>
+    <a href="{{ app_root | append: 'support/' | relative_url }}"{% if page.layout == "support" %} aria-current="page"{% endif %}>{{ t.support }}</a>
+    <a href="{{ app_root | append: 'privacy/' | relative_url }}"{% if page.layout == "privacy" %} aria-current="page"{% endif %}>{{ t.privacy }}</a>
+    {%- endif %}
+    {%- if page.alt %}
+    <a class="lang-switch" href="{{ page.alt | relative_url }}" hreflang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}" lang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}">{% if page.lang == "fr" %}EN{% else %}FR{% endif %}</a>
+    {%- endif %}
+  </nav>
+</header>
